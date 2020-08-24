@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col s12 m12">
+        <ul class="pagination center-align">
+            {{#if pagination.previousButton.isFirstPage}}
+            <li class="disabled"><a href=""><i class="material-icons">chevron_left</i></a></li>
+            {{else}}
+            <li class="waves-effect"><a href="?page={{ pagination.previousButton.previousPageNumber }}"><i class="material-icons">chevron_left</i></a></li>
+            {{/if}}
+            {{#each pagination.pageItems}}
+            {{#if isCurrentPage}}
+            <li class="active blue-grey darken-1"><a href="">{{ pageNumber }}</a></li>
+            {{else}}
+            <li class="waves-effect"><a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
+            {{/if}}
+            {{/each}}
+            {{#if pagination.nextButton.isLastPage}}
+            <li class="disabled"><a href=""><i class="material-icons">chevron_right</i></a></li>
+            {{else}}
+            <li class="waves-effect"><a href="?page={{ pagination.nextButton.nextPageNumber }}"><i class="material-icons">chevron_right</i></a></li>
+            {{/if}}
+        </ul>
+    </div>
+</div>

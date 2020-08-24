@@ -1,0 +1,27 @@
+{
+  "name": "poc-hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "lab -v tests/unit-tests/**/*.test.js",
+    "functional-test": "lab -v tests/functional-tests/**/*.test.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^20.0.0",
+    "@hapi/inert": "^6.0.2",
+    "@hapi/vision": "^6.0.1",
+    "@hapi/wreck": "^17.0.0",
+    "hapi-swagger": "^14.0.0",
+    "joi": "^17.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.2",
+    "@hapi/lab": "^23.0.0"
+  }
+}
